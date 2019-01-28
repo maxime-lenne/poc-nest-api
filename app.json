@@ -1,0 +1,14 @@
+{
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "",
+        "test": "yarn test"
+      }
+    },
+    "env": {
+      "NPM_CONFIG_PRODUCTION": false,
+      "NODE_ENV": "test"
+    }
+  }
+}
