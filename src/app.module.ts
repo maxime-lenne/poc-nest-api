@@ -7,7 +7,15 @@ import { config } from "dotenv";
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot(),
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      url: 'process.env.DATABASE_URL',
+      extra: {
+        ssl: true,
+      },
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      synchronize: true,
+    }),
     config
   ],
   controllers: [AppController],

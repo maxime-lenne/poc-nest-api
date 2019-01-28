@@ -20,3 +20,5 @@ src/config.ts
 .env
 # code testing coverage
 coverage
+
+dist
