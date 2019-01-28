@@ -56,3 +56,31 @@ $ yarn add @nestjs/typeorm typeorm pg
 ```
 
 need .env and ormconfig.json in root path
+
+```json
+{
+  "type": "postgres",
+  "url": "you_db_url",
+  "entities": ["src/**/**.entity{.ts,.js}"],
+  "migrations": ["src/migrations/*{.ts,.js}"],
+  "cli": {
+      "migrationsDir": "src/migrations"
+  }
+}
+```
+without this file the typeorm client doesn't work.
+
+[Npm script added to support typeorm on typescript file](https://github.com/typeorm/typeorm/blob/master/docs/using-cli.md#notes-on-entity-files-written-in-typescript)
+To generate a ts migration directly with entity change :
+```bash
+$ ts-node ./node_modules/typeorm/cli.js migration:generate -n CreateCategory
+#Or with the npm script just type :
+yarn typeorm migration:generate -n CreateCategory
+```
+
+To execute ts migration :
+```bash
+$ ts-node ./node_modules/typeorm/cli.js migration:run
+#Or with the npm script just type :
+yarn typeorm migration:run
+```

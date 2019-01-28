@@ -1,9 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
+import { config } from "dotenv";
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { config } from "dotenv";
+import { CategoryModule } from './category/category.module';
+
 
 @Module({
   imports: [
@@ -11,9 +14,10 @@ import { config } from "dotenv";
       type: 'postgres',
       url: process.env.DATABASE_URL,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true,
+      migrations: ["src/migrations/*.js"]
     }),
-    config
+    config,
+    CategoryModule
   ],
   controllers: [AppController],
   providers: [AppService],
