@@ -10,9 +10,6 @@ import { config } from "dotenv";
     TypeOrmModule.forRoot({
       type: 'postgres',
       url: process.env.DATABASE_URL,
-      extra: {
-        ssl: true,
-      },
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
