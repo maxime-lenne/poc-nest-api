@@ -55,7 +55,13 @@ $ yarn add @nestjs/typeorm typeorm pg
 
 ```
 
-need .env and ormconfig.json in root path
+need .env :
+```
+PORT=3000
+DATABASE_URL=postgres://you_db_url
+```
+
+and ormconfig.json in root path :
 
 ```json
 {
@@ -69,6 +75,7 @@ need .env and ormconfig.json in root path
 }
 ```
 without this file the typeorm client doesn't work.
+install cli with : `npm install -g ts-node`
 
 [Npm script added to support typeorm on typescript file](https://github.com/typeorm/typeorm/blob/master/docs/using-cli.md#notes-on-entity-files-written-in-typescript)
 To generate a ts migration directly with entity change :
@@ -84,3 +91,5 @@ $ ts-node ./node_modules/typeorm/cli.js migration:run
 #Or with the npm script just type :
 yarn typeorm migration:run
 ```
+
+seed
