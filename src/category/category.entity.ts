@@ -9,15 +9,15 @@ export class Category extends BaseEntity {
   label: string;
 
   @Column('int')
-  minimum_price: number;
+  minimumPrice: number;
 
   @Column('int')
-  maximum_price: number;
+  maximumPrice: number;
 
   @CreateDateColumn()
-  public created_at: Date;
+  public createdAt: Date;
 
   @UpdateDateColumn()
-  public updated_at: Date;
+  public updatedAt: Date;
 
 }
