@@ -3,8 +3,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { config } from 'dotenv';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { CategoryModule } from './category/category.module';
 
 @Module({
@@ -17,9 +15,7 @@ import { CategoryModule } from './category/category.module';
     }),
     config,
     CategoryModule
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+  ]
 })
 export class AppModule {
   constructor(private readonly connection: Connection) {}
