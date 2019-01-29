@@ -95,5 +95,6 @@ $ heroku run typeorm migration:run -a poc-frizbiz-api
 ```
 
 On heroku postinstall script is running
+https://devcenter.heroku.com/articles/nodejs-support#build-behavior
 
 ### seed

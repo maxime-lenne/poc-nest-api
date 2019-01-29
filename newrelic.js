@@ -9,11 +9,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['My Application'],
+  app_name: ['Poc nestjs API'],
   /**
    * Your New Relic license key.
    */
-  license_key: 'license key here',
+  license_key: process.env.NEWRELIC_LICENCE_KEY,
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
