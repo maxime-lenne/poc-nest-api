@@ -1,3 +1,4 @@
+require('newrelic');
 import { NestFactory, FastifyAdapter } from '@nestjs/core';
 import { AppModule } from './app.module';
 

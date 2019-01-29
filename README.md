@@ -82,14 +82,18 @@ To generate a ts migration directly with entity change :
 ```bash
 $ ts-node ./node_modules/typeorm/cli.js migration:generate -n CreateCategory
 #Or with the npm script just type :
-yarn typeorm migration:generate -n CreateCategory
+$ yarn typeorm migration:generate -n CreateCategory
 ```
 
 To execute ts migration :
 ```bash
 $ ts-node ./node_modules/typeorm/cli.js migration:run
 #Or with the npm script just type :
-yarn typeorm migration:run
+$ yarn typeorm migration:run
+#on heroku
+$ heroku run typeorm migration:run -a poc-frizbiz-api
 ```
 
-seed
+On heroku postinstall script is running
+
+### seed
