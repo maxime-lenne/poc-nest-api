@@ -14,6 +14,12 @@ export class Category extends BaseEntity {
   @Column('int')
   maximumPrice: number;
 
+  @Column({ length: 500 })
+  unit: string;
+
+  @Column({ length: 500 })
+  placeholder: string;
+
   @CreateDateColumn()
   public createdAt: Date;
 
