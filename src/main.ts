@@ -14,6 +14,7 @@ async function bootstrap() {
     .setTitle('Poc nest.js API')
     .setDescription('The Poc nest.js API description')
     .setVersion('1.0')
+    .setSchemes('http', 'https')
     .addTag('categories')
     .build();
   const document = SwaggerModule.createDocument(app, options);
