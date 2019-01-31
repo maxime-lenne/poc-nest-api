@@ -91,7 +91,7 @@ $ ts-node ./node_modules/typeorm/cli.js migration:run
 #Or with the npm script just type :
 $ yarn typeorm migration:run
 #on heroku
-$ heroku run typeorm migration:run -a poc-frizbiz-api
+$ heroku run typeorm migration:run -a poc-nest-api
 ```
 
 On heroku postinstall script is running
