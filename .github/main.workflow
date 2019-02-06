@@ -77,7 +77,7 @@ action "push-production" {
     "MIGRATIONS_DIR",
     "MIGRATIONS_PATH",
     "NEWRELIC_LICENCE_KEY",
-    "REDISCLOUD_URL"
+    "REDISCLOUD_URL",
   ]
   env = {
     HEROKU_APP = "poc-nest-api"
