@@ -12,24 +12,44 @@ action "Build" {
   needs = "Install"
   uses = "actions/npm@master"
   args = "run postinstall"
+  env = {
+    ENTITIES_PATH = "src/**/**.entity{.ts,.js}"
+    MIGRATIONS_PATH = "src/migrations/*{.js,.ts}"
+    MIGRATIONS_DIR = "src/migrations"
+  }
 }
 
 action "Lint" {
   needs = "Build"
   uses = "actions/npm@master"
   args = "run lint"
+  env = {
+    ENTITIES_PATH = "src/**/**.entity{.ts,.js}"
+    MIGRATIONS_PATH = "src/migrations/*{.js,.ts}"
+    MIGRATIONS_DIR = "src/migrations"
+  }
 }
 
 action "Test" {
   needs = "Build"
   uses = "actions/npm@master"
   args = "run test"
+  env = {
+    ENTITIES_PATH = "src/**/**.entity{.ts,.js}"
+    MIGRATIONS_PATH = "src/migrations/*{.js,.ts}"
+    MIGRATIONS_DIR = "src/migrations"
+  }
 }
 
 action "Cov" {
   needs = "Build"
   uses = "actions/npm@master"
   args = "run test:cov"
+  env = {
+    ENTITIES_PATH = "src/**/**.entity{.ts,.js}"
+    MIGRATIONS_PATH = "src/migrations/*{.js,.ts}"
+    MIGRATIONS_DIR = "src/migrations"
+  }
 }
 
 # Filter for master branch

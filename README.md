@@ -57,8 +57,13 @@ $ yarn add @nestjs/typeorm typeorm pg
 
 need .env :
 ```
-PORT=3000
+PORT=3001
 DATABASE_URL=postgres://you_db_url
+NEWRELIC_LICENCE_KEY=
+ENTITIES_PATH=src/**/**.entity{.ts,.js}
+MIGRATIONS_PATH=src/migrations/*{.js,.ts}
+MIGRATIONS_DIR=src/migrations
+REDISCLOUD_URL=
 ```
 
 and ormconfig.json in root path :
