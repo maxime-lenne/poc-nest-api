@@ -7,12 +7,7 @@ import { CategoryModule } from './category/category.module';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      url: process.env.DATABASE_URL,
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      migrations: ["src/migrations/*.js"]
-    }),
+    TypeOrmModule.forRoot(),
     config,
     CategoryModule
   ]
