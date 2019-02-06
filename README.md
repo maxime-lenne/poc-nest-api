@@ -43,7 +43,7 @@ $ yarn test:cov
 ## How to create this poc :
 
 ```bash
-$ nest new poc-frizbiz-api
+$ nest new poc-nest-api
 # With yarn
 
 $ yarn add fastify fastify-formbody

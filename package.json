@@ -1,7 +1,7 @@
 {
-  "name": "poc-frizbiz-api",
+  "name": "poc-nest-api",
   "version": "0.0.0",
-  "description": "Prof of concept archi frizbiz",
+  "description": "Prof of concept archi nest",
   "author": "@MaximeLenne",
   "license": "MIT",
   "scripts": {
@@ -11,8 +11,8 @@
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
     "start:dev": "nodemon",
     "start:debug": "nodemon --config nodemon-debug.json",
-    "postinstall": "rimraf dist && npm run build",
-    "prestart:prod": "rimraf dist && npm run build",
+    "postinstall": "rimraf dist && yarn build",
+    "prestart:prod": "rimraf dist && yarn build",
     "start:prod": "node dist/main.js",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
