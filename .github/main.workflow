@@ -34,7 +34,7 @@ action "Cov" {
 
 # Filter for master branch
 action "Master" {
-  needs = ["Test", "Lint", 'Cov']
+  needs = ["Test", "Lint", "Cov"]
   uses = "actions/bin/filter@master"
   args = "branch master"
 }

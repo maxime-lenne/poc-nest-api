@@ -94,7 +94,13 @@ $ yarn typeorm migration:run
 $ heroku run typeorm migration:run -a poc-nest-api
 ```
 
+## deploy
+### Withou docker :
+
 On heroku postinstall script is running
 https://devcenter.heroku.com/articles/nodejs-support#build-behavior
+
+### With docker :
+heroku stack:set container -a poc-nest-api
 
 ### seed
