@@ -1,12 +1,5 @@
 # Build step
 FROM node:alpine as build-stage
-ENV DIRPATH /usr/src
-ENV DIRNAME app
-RUN mkdir -p $DIRPATH/$DIRNAME
-WORKDIR $DIRPATH/$DIRNAME
-
-# Install app dependencies
-RUN apk update && apk upgrade && apk add git
 
 ARG PORT
 ARG DATABASE_URL
@@ -24,6 +17,13 @@ ENV MIGRATIONS_PATH $MIGRATIONS_PATH
 ENV NEWRELIC_LICENCE_KEY $NEWRELIC_LICENCE_KEY
 ENV REDISCLOUD_URL $REDISCLOUD_URL
 
+ENV DIRPATH /usr/src
+ENV DIRNAME app
+RUN mkdir -p $DIRPATH/$DIRNAME
+WORKDIR $DIRPATH/$DIRNAME
+
+# Install app dependencies
+RUN apk update && apk upgrade && apk add git
 
 # Detect whether you have a yarn.lock already and if so
 # just install deps listed on lock file
